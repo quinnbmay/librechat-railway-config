@@ -42,10 +42,9 @@ endpoints:
         default: [
           "mistral-tiny",
           "mistral-small", 
-          "mistral-medium",
-          "mistral-large-latest"
+          "mistral-large"
         ]
-        fetch: true
+        fetch: false
       titleConvo: true
       titleModel: "mistral-tiny"
       modelDisplayLabel: "Mistral"
