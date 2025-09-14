@@ -1,0 +1,111 @@
+# LibreChat Configuration - Railway Project
+# Combined Memory - LibreChat 🪶 Production Configuration
+# Version: 1.2.1 - Railway Project MCPs
+
+version: 1.2.1
+
+# Cache settings
+cache: true
+
+# File storage configuration
+fileConfig:
+  useLocalFiles: true
+  allowedTypes:
+    - image/jpeg
+    - image/png
+    - image/gif
+    - image/webp
+    - image/svg+xml
+    - application/pdf
+    - text/plain
+    - text/csv
+    - text/markdown
+    - application/json
+    - application/xml
+    - text/xml
+    - application/zip
+    - application/x-zip-compressed
+    - application/vnd.openxmlformats-officedocument.wordprocessingml.document
+    - application/vnd.openxmlformats-officedocument.spreadsheetml.sheet
+    - application/vnd.openxmlformats-officedocument.presentationml.presentation
+  maxSize: 25
+  maxFiles: 10
+
+# Model Context Protocol (MCP) Servers
+mcpServers:
+  # Development & Project Management
+  railway:
+    type: stdio
+    command: npx
+    args:
+      - '@jasontanswe/railway-mcp'
+    env:
+      RAILWAY_TOKEN: 'ce075fe8-1873-4d61-a67a-f65a698ae3ec'
+    timeout: 60000
+    iconPath: https://railway.app/favicon.ico
+
+  # Web Development & Design (Local API Token)
+  webflow:
+    type: stdio
+    command: npx
+    args:
+      - '-y'
+      - 'webflow-mcp-server'
+    env:
+      WEBFLOW_TOKEN: '${WEBFLOW_TOKEN}'
+    timeout: 60000
+    iconPath: https://webflow.com/favicon.ico
+
+  # Workflow Automation
+  n8n-railway:
+    type: stdio
+    command: npx
+    args:
+      - '-y'
+      - 'mcp-remote'
+      - 'https://czlonkowskin8n-mcp-railwaylatest-production-23d6.up.railway.app/mcp'
+      - '--header'
+      - 'Authorization: Bearer cwmWLcSwK2jIuwCAgtYeDDwztEkc1afLomiFszDd8Fc='
+    timeout: 60000
+    iconPath: https://n8n.io/favicon.ico
+
+  # Memory & AI Enhancement
+  quinns-memory:
+    type: http
+    url: https://server.smithery.ai/@quinnbmay/quinns-memory-mcp-server/mcp?api_key=${QUINNS_MEMORY_API_KEY}&profile=${QUINNS_MEMORY_PROFILE}
+    timeout: 60000
+    iconPath: https://res.cloudinary.com/dfctldgya/image/upload/v1757455636/uewnvovkzpr46dyfaia3.png
+
+  # Document Processing & AI Analysis
+  jina-mcp-server:
+    type: stdio
+    command: npx
+    args:
+      - '-y'
+      - 'mcp-remote'
+      - 'https://mcp.jina.ai/sse'
+      - '--header'
+      - 'Authorization: Bearer ${JINA_API_KEY}'
+    timeout: 60000
+    iconPath: https://jina.ai/favicon.ico
+
+  # Notion - Database & Page Management (Smithery-hosted)
+  notion-mcp:
+    type: http
+    url: https://server.smithery.ai/@smithery/notion/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
+    timeout: 60000
+    iconPath: https://notion.so/images/favicon.ico
+
+  # Upstash Context7 - Documentation & Code Examples (Smithery-hosted)
+  upstash-context7:
+    type: http
+    url: https://server.smithery.ai/@upstash/context7-mcp/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
+    timeout: 60000
+    iconPath: https://upstash.com/favicon.ico
+
+  # GitHub - Repository Management & Copilot Integration (Smithery-hosted)
+  github:
+    type: http
+    url: https://server.smithery.ai/@smithery-ai/github/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
+    timeout: 60000
+    iconPath: https://github.com/favicon.ico
