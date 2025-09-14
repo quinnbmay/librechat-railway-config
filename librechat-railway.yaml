@@ -31,6 +31,26 @@ fileConfig:
   maxSize: 25
   maxFiles: 10
 
+# AI Endpoints
+endpoints:
+  custom:
+    # Mistral AI API
+    - name: "Mistral"
+      apiKey: "${MISTRAL_API_KEY}"
+      baseURL: "https://api.mistral.ai/v1"
+      models:
+        default: [
+          "mistral-tiny",
+          "mistral-small", 
+          "mistral-medium",
+          "mistral-large-latest"
+        ]
+        fetch: true
+      titleConvo: true
+      titleModel: "mistral-tiny"
+      modelDisplayLabel: "Mistral"
+      dropParams: ["stop", "user", "frequency_penalty", "presence_penalty"]
+
 # Model Context Protocol (MCP) Servers
 mcpServers:
   # Development & Project Management
