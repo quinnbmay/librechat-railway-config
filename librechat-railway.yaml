@@ -155,3 +155,14 @@ mcpServers:
     url: https://server.smithery.ai/@smithery-ai/github/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
     timeout: 60000
     iconPath: https://github.com/favicon.ico
+
+  # Framer - Design & Prototyping Integration
+  framer:
+    type: stdio
+    command: npx
+    args:
+      - '-y'
+      - 'mcp-remote'
+      - 'https://mcp.unframer.co/sse?id=9795c7968f099767a1b8aa6c68171df1a1361b4aaa72d17b2e3a1282e049ecfd&secret=84WWFcZsTziaGbrVztKpnIgDnOVp1NCe'
+    timeout: 60000
+    iconPath: https://framer.com/favicon.ico

@@ -1,0 +1,11 @@
+version: 1.2.8
+cache: true
+endpoints:
+  custom:
+    - name: "Claude"
+      apiKey: "anything"  # Can be any string
+      baseURL: "http://localhost:8000/v1"
+      models:
+        default: ["claude-3-5-sonnet"]
+      fetch: false
+      modelDisplayLabel: "Claude"
