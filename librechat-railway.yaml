@@ -60,10 +60,10 @@ fileConfig:
 # AI Endpoints
 endpoints:
   custom:
-    # Claude Subscription (via Tailscale Proxy)
+    # Claude Subscription (via Railway Tailscale Forwarder)
     - name: "Claude Subscription (via Proxy)"
       apiKey: "dummy-key"  # Can be any string since we're using your subscription
-      baseURL: "http://100.91.154.82:4000/v1"
+      baseURL: "http://tailscale-forwarder.railway.internal:8080/v1"
       models:
         default:
           - "claude-3-5-sonnet-20241022"
