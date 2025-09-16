@@ -60,6 +60,23 @@ fileConfig:
 # AI Endpoints
 endpoints:
   custom:
+    # Claude Subscription (via Proxy)
+    - name: "Claude Subscription (via Proxy)"
+      apiKey: "dummy-key"  # Can be any string since we're using your subscription
+      baseURL: "http://localhost:4000/v1"
+      models:
+        default:
+          - "claude-3-5-sonnet-20241022"
+          - "claude-3-5-haiku-20241022"
+          - "claude-3-opus-20240229"
+        fetch: false
+      modelDisplayLabel: "Claude (Unlimited)"
+      titleModel: "claude-3-5-haiku-20241022"
+      summarize: false
+      dropParams: []
+      skipCompletion: false
+      directEndpoint: false
+      
     # Mistral AI API
     - name: "Mistral"
       apiKey: "${MISTRAL_API_KEY}"
