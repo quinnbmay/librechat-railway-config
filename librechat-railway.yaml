@@ -7,6 +7,32 @@ version: 1.2.1
 # Cache settings
 cache: true
 
+# Memory configuration for conversation memory
+memory:
+  disabled: false
+  validKeys:
+    - "user_preferences"
+    - "conversation_context"
+    - "learned_facts"
+    - "personal_information"
+    - "project_details"
+    - "workflow_preferences"
+  tokenLimit: 4000
+  personalize: true
+  messageWindowSize: 10
+  agent:
+    provider: "openAI"
+    model: "gpt-4o-mini"
+    instructions: |
+      Store memory using only the specified validKeys. Focus on:
+      - user_preferences: communication style, topics of interest, workflow preferences
+      - conversation_context: ongoing projects, important facts mentioned
+      - learned_facts: objective information about the user and their work
+      - personal_information: relevant personal details that aid in assistance
+      - project_details: active projects, technical preferences, tools used
+      - workflow_preferences: preferred development practices, coding styles
+      Be selective and only store information that will be genuinely useful for future conversations.
+
 # File storage configuration
 fileConfig:
   useLocalFiles: true
@@ -42,9 +68,10 @@ endpoints:
         default: [
           "mistral-tiny",
           "mistral-small", 
-          "mistral-large"
+          "mistral-medium",
+          "mistral-large-latest"
         ]
-        fetch: false
+        fetch: true
       titleConvo: true
       titleModel: "mistral-tiny"
       modelDisplayLabel: "Mistral"
