@@ -60,10 +60,10 @@ fileConfig:
 # AI Endpoints
 endpoints:
   custom:
-    # Claude Subscription (via Proxy)
+    # Claude Subscription (via Tailscale Proxy)
     - name: "Claude Subscription (via Proxy)"
       apiKey: "dummy-key"  # Can be any string since we're using your subscription
-      baseURL: "http://localhost:4000/v1"
+      baseURL: "http://100.91.154.82:4000/v1"
       models:
         default:
           - "claude-3-5-sonnet-20241022"
