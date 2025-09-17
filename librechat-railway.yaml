@@ -1,8 +1,8 @@
 # LibreChat Configuration - Railway Project
 # Combined Memory - LibreChat 🪶 Production Configuration
-# Version: 1.2.1 - Railway Project MCPs
+# Version: 1.2.9 - Railway Project MCPs
 
-version: 1.2.1
+version: 1.2.9
 
 # Cache settings
 cache: true
@@ -64,14 +64,8 @@ endpoints:
     reasoning_summary: "auto"
     verbosity: 1
     stream: true
-    # Enable file support for OpenAI endpoint
-    fileSupport: true
   google:
-    # Enable file support for Google endpoint  
-    fileSupport: true
   anthropic:
-    # Enable file support for Anthropic endpoint
-    fileSupport: true
   custom:
     # Mistral AI API
     - name: "Mistral"
@@ -90,8 +84,6 @@ endpoints:
       modelDisplayLabel: "Mistral"
       dropParams: ["stop", "user", "frequency_penalty", "presence_penalty"]
       stream: true
-      # Enable file support for custom endpoints
-      fileSupport: true
 
 # Model Context Protocol (MCP) Servers
 mcpServers:
