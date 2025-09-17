@@ -63,6 +63,7 @@ endpoints:
     reasoning_effort: "medium"
     reasoning_summary: "auto"
     verbosity: 1
+    stream: true
   custom:
     # Mistral AI API
     - name: "Mistral"
@@ -80,6 +81,7 @@ endpoints:
       titleModel: "mistral-tiny"
       modelDisplayLabel: "Mistral"
       dropParams: ["stop", "user", "frequency_penalty", "presence_penalty"]
+      stream: true
 
 # Model Context Protocol (MCP) Servers
 mcpServers:
