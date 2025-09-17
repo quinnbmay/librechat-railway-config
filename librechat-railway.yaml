@@ -60,23 +60,6 @@ fileConfig:
 # AI Endpoints
 endpoints:
   custom:
-    # Claude Subscription (via Railway Tailscale Forwarder)
-    - name: "Claude Subscription (via Proxy)"
-      apiKey: "dummy-key"  # Can be any string since we're using your subscription
-      baseURL: "http://tailscale-forwarder.railway.internal:8080/v1"
-      models:
-        default:
-          - "claude-3-5-sonnet-20241022"
-          - "claude-3-5-haiku-20241022"
-          - "claude-3-opus-20240229"
-        fetch: false
-      modelDisplayLabel: "Claude (Unlimited)"
-      titleModel: "claude-3-5-haiku-20241022"
-      summarize: false
-      dropParams: []
-      skipCompletion: false
-      directEndpoint: false
-      
     # Mistral AI API
     - name: "Mistral"
       apiKey: "${MISTRAL_API_KEY}"
@@ -172,14 +155,3 @@ mcpServers:
     url: https://server.smithery.ai/@smithery-ai/github/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
     timeout: 60000
     iconPath: https://github.com/favicon.ico
-
-  # Framer - Design & Prototyping Integration
-  framer:
-    type: stdio
-    command: npx
-    args:
-      - '-y'
-      - 'mcp-remote'
-      - 'https://mcp.unframer.co/sse?id=9795c7968f099767a1b8aa6c68171df1a1361b4aaa72d17b2e3a1282e049ecfd&secret=84WWFcZsTziaGbrVztKpnIgDnOVp1NCe'
-    timeout: 60000
-    iconPath: https://framer.com/favicon.ico
