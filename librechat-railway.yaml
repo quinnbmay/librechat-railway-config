@@ -85,14 +85,10 @@ endpoints:
 
 # Model Context Protocol (MCP) Servers
 mcpServers:
-  # Development & Project Management
+  # Development & Project Management (Smithery-hosted)
   railway:
-    type: stdio
-    command: npx
-    args:
-      - '@jasontanswe/railway-mcp'
-    env:
-      RAILWAY_TOKEN: 'ce075fe8-1873-4d61-a67a-f65a698ae3ec'
+    type: http
+    url: https://server.smithery.ai/@jason-tan-swe/railway-mcp/mcp?api_key=c0696122-7da9-4c99-84e2-1798ce74a954&profile=given-narwhal-PvFXc4
     timeout: 60000
     iconPath: https://railway.app/favicon.ico
 
