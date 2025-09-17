@@ -7,14 +7,6 @@ version: 1.2.1
 # Cache settings
 cache: true
 
-# RAG API Configuration
-# Enable file uploads and document chat functionality
-rag:
-  enabled: true
-  apiUrl: "${RAG_API_URL}"
-  # JWT authentication shares the same secret as LibreChat
-  jwtSecret: "${JWT_SECRET}"
-
 # Memory configuration for conversation memory
 memory:
   disabled: false
