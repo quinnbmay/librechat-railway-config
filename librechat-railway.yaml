@@ -59,6 +59,10 @@ fileConfig:
 
 # AI Endpoints
 endpoints:
+  openAI:
+    reasoning_effort: "medium"
+    reasoning_summary: "auto"
+    verbosity: 1
   custom:
     # Mistral AI API
     - name: "Mistral"
@@ -67,7 +71,7 @@ endpoints:
       models:
         default: [
           "mistral-tiny",
-          "mistral-small", 
+          "mistral-small",
           "mistral-medium",
           "mistral-large-latest"
         ]
