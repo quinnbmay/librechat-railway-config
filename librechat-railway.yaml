@@ -64,8 +64,6 @@ endpoints:
     reasoning_summary: "auto"
     verbosity: 1
     stream: true
-  google:
-  anthropic:
   custom:
     # Mistral AI API
     - name: "Mistral"
