@@ -118,9 +118,9 @@ mcpServers:
     iconPath: https://n8n.io/favicon.ico
 
   # Memory & AI Enhancement
-  quinns-memory:
+  memory:
     type: http
-    url: https://server.smithery.ai/@quinnbmay/quinns-memory-mcp-server/mcp?api_key=${QUINNS_MEMORY_API_KEY}&profile=${QUINNS_MEMORY_PROFILE}
+    url: https://apollo.composio.dev/v3/mcp/91bec9dc-e44a-4327-b35f-8227c006a8d1/mcp?user_id=quinn_may
     timeout: 60000
     iconPath: https://res.cloudinary.com/dfctldgya/image/upload/v1757455636/uewnvovkzpr46dyfaia3.png
 
