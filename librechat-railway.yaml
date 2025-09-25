@@ -120,8 +120,8 @@ mcpServers:
   # Memory & AI Enhancement
   memory:
     type: http
-    url: https://apollo.composio.dev/v3/mcp/91bec9dc-e44a-4327-b35f-8227c006a8d1/mcp?user_id=quinn_may
-    timeout: 60000
+    url: https://n8n.combinedmemory.com/mcp/memory
+    timeout: 1200000
     iconPath: https://res.cloudinary.com/dfctldgya/image/upload/v1757455636/uewnvovkzpr46dyfaia3.png
 
   # Document Processing & AI Analysis
